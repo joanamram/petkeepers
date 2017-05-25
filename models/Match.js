@@ -3,17 +3,18 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
 
-const petSchema = new Schema({
+const matchSchema = new Schema({
   petName: String,
-  yearOfBirth: Date,
-  description: String,
-    pic_path: String,
-    pic_name: String,
+  fromDate: Date,
+  toDate: Date,
+  keeper: {type:Boolean, default: false},
   petOwner: {
     ref: 'User',
     type: Schema.Types.ObjectId
   }
-},
+  comment: String,
+    rate: Number
+  },
 
 {
   timestamps: {
@@ -23,5 +24,5 @@ const petSchema = new Schema({
 });
 
 
-const User = mongoose.model('Pets', petSchema);
-module.exports = Pets;
+const User = mongoose.model('Match', matchSchema);
+module.exports = Match;
