@@ -52,7 +52,7 @@ module.exports = function (passport) {
   }, (accessToken, refreshToken, profile, done) => {
 
     FB.setAccessToken(accessToken);
-
+    console.log("done fb")
     var apiFriends = new Promise((resolve, reject) => {
       FB.api(
           "/me/friends",
@@ -100,22 +100,29 @@ module.exports = function (passport) {
       let picture = promises[1].picture;
       let name = profile.displayName;
       let facebookID = profile.id;
-
+      console.log("pomises ready")
       if (promises[2] === "create") {
+        console.log("hgfhjf");
         const newUser = new User({
           friends: friends,
           email: email,
           picture: picture,
           facebookID: facebookID,
           name: name,
+          location:{
+            type: 'Point',
+            coordinates: ['40.416775', 	'-3.703790']
+          }
         });
         newUser.save((err) => {
           if (err) {
+            console.log("errorrrrr");
             return done(err);
           }
           done(null, newUser);
         });
       } else if (promises[2]._id) {
+        console.log("update userr");
         User.findOneAndUpdate(
            { "_id" : promises[2]._id },
            { $set: {

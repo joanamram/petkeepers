@@ -7,7 +7,7 @@ usersRoutes.post('/:id/location', (req, res, next) => {
     type: 'Point',
     coordinates: ['40.416775', 	'-3.703790']
   };
-
+console.log(req.params.id);
   User.findOneAndUpdate(
      { "facebookID" : req.params.id },
      { $set: {
