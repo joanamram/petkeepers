@@ -11,9 +11,9 @@ const matchSchema = new Schema({
   petOwner: {
     ref: 'User',
     type: Schema.Types.ObjectId
-  }
+  },
   comment: String,
-    rate: Number
+  rate: Number
   },
 
 {
@@ -24,5 +24,5 @@ const matchSchema = new Schema({
 });
 
 
-const User = mongoose.model('Match', matchSchema);
+const Match = mongoose.model('Match', matchSchema);
 module.exports = Match;
