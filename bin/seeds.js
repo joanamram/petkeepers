@@ -8,46 +8,186 @@ mongoose.connect('mongodb://localhost/petkeepers');
 
 const entries = [
   {
-    name:
-    title: "First Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    facebookID: "10211878185902164",
+    name: "Joana Sequerra Amram",
+    email: "joanamram@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
   },
   {
-    title: "Second Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    facebookID: "10211878185902163",
+    name: "Raul",
+    email: "raul@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980483'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
   },
   {
-    title: "Third Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    facebookID: "10211878185902162",
+    name: "Marc Pomar",
+    email: "marc@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980474'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
   },
   {
-    title: "Fourth Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    facebookID: "10211878185902161",
+    name: "Olivia",
+    email: "olivia@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980464'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
   },
   {
-    title: "Fifth Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    facebookID: "10211878185902160",
+    name: "Papu",
+    email: "papu@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980454'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
   },
   {
-    title: "Sixth Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    facebookID: "10211878185902154",
+    name: "Rafael",
+    email: "rafael@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980444'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
   },
   {
-    title: "Seventh Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    facebookID: "10211878185902144",
+    name: "Andrei",
+    email: "andrei@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980434'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
   },
   {
-    title: "Eighth Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    facebookID: "10211878185902134",
+    name: "Fran",
+    email: "fran@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980424'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
   },
   {
-    title: "Ninth Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    facebookID: "10211878185902124",
+    name: "Eri",
+    email: "eri@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980414'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
   },
   {
-    title: "Tenth Post",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  }
+    facebookID: "10211878185902114",
+    name: "Pablo",
+    email: "pablo@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344704128980404'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "10211878185902104",
+    name: "Alvaro",
+    email: "alvaro@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1244704128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "10211878185902064",
+    name: "Claudia",
+    email: "claudia@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1144704128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "10211878185901164",
+    name: "Gonzalo",
+    email: "gonzalo@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1044704128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "10211878185900164",
+    name: "Fernando",
+    email: "fernando@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344604128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "10211878184902164",
+    name: "Carlos",
+    email: "carlos@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344504128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "10211877185902164",
+    name: "Mauro",
+    email: "mauro@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344404128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "10210878185902164",
+    name: "Josh",
+    email: "josh@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344304128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "12211878185902164",
+    name: "Luis",
+    email: "luis@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344204128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "10211878185902164",
+    name: "Joana Sequerra Amram",
+    email: "joanamram@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344104128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+  {
+    facebookID: "10111878185902164",
+    name: "Joana Sequerra Amram",
+    email: "joanamram@gmail.com",
+    picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4',
+    friends: ['1344004128980484'],
+    location: {"type: 'Point', coordinates: [ 40.416775, -3.70379 ]"},
+    keeper:"false"
+  },
+
 ];
 
 UserEntry.create(entries, (err, entries) => {
