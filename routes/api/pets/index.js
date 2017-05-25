@@ -1,5 +1,6 @@
 const express    = require('express');
 const multer     = require('multer');
+const upload     = multer({ dest: 'uploads/' })
 const Pets       = require('../../../models/Pets');
 const User       = require('../../../models/User');
 
@@ -19,7 +20,7 @@ petsRoutes.post('/pets/new', upload.single('photo'),  (req, res, next) => {
       .then( Pets => {res.json({ message: 'New Pet created!', id: newPet._id });})
       .reject( err => {res.json(err); });
   });
-});
+
 
 petsRoutes.post('/pets/:id/edit', (req, res, next) =>  {
   const updates = {
@@ -36,12 +37,14 @@ petsRoutes.post('/pets/:id/edit', (req, res, next) =>  {
     }
     res.json({ message: 'Pet updated successfully'});
   });
-};
+});
 
 
 petsRoutes.delete('/:id', (req, res, next) => {
     petModel.findByIdAndRemove(req.params.id)
       .then((newPet) => res.status(202).json({ message: 'pet removed successfully' }))
       .catch(err => res.status(500).json({ message: 'impossible to remove the pet', error: err }));
-};
+});
+
+
 module.exports = petsRoutes;

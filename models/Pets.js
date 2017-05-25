@@ -23,5 +23,5 @@ const petSchema = new Schema({
 });
 
 
-const User = mongoose.model('Pets', petSchema);
+const Pets = mongoose.model('Pets', petSchema);
 module.exports = Pets;

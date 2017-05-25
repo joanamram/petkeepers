@@ -7,17 +7,19 @@ const Match       = require('../../../models/Match');
 const matchRoutes = express.Router();
 
 matchRoutes.post('/match',  (req, res, next) => {
+  // let keeper,
+  // let petOwner,
+  // let pet,
   const newRelation = new relationModel({
-    petOwner : req.user._id;
+    // petOwner : req.user._id;
     //keeper : req.body.keeper._id;
-    pet : req.body.pet._id;
-    console.log(req.body);
-    console.log(req.user);
+    // pet : req.body.pet._id;
+
   });
 
 
   newRelation.save()
-      .then( Pets => {res.json({ message: 'There was a match!');})
+      .then( Pets => {res.json({ message: 'There was a match!'})
       .reject( err => {res.json(err); });
   });
 });
@@ -25,14 +27,17 @@ matchRoutes.post('/match',  (req, res, next) => {
 
 
 matchRoutes.post('/match/rate', (req, res, next) =>  {
+  // let keeper,
+  // let petOwner,
+  // let pet,
+  //
   const newRelationRate = new relationModelRate({
-    petOwner : req.user._id;
-    //keeper : req.body.keeper._id;
-    pet : req.body.pet._id;
+    // petOwner : req.user._id;
+    // //keeper : req.body.keeper._id;
+    // pet : req.body.pet._id;
     // comment:req.body.data.formInfo.comments;
     // rate:req.body.data.formInfo.rate;
-    console.log(req.body);
-    console.log(req.user);
+
   });
 
   relationModelRate.save((err) => {
@@ -41,7 +46,7 @@ matchRoutes.post('/match/rate', (req, res, next) =>  {
     }
     res.json({ message: 'Classification made successfully'});
   });
-};
+});
 
 
 
