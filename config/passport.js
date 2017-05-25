@@ -7,9 +7,6 @@ const FbStrategy = require('passport-facebook').Strategy;
 var FB = require('fb');
 
 
-
-
-
 module.exports = function (passport) {
 
   passport.use(new LocalStrategy((username, password, next) => {

@@ -10,6 +10,10 @@ var users = require('./routes/users');
 var api = require('./routes/api/index');
 var app = express();
 var  authRoutes = require('./routes/api/auth/index');
+var  matchRoutes = require('./routes/api/match/index');
+var  petRoutes = require('./routes/api/pets/index');
+
+
 const session    = require('express-session');
 const passport   = require('passport');
 
@@ -49,6 +53,8 @@ app.get('/', (req, res, next) => {
 
 app.use('/users', users);
 app.use('/api', api);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
