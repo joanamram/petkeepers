@@ -2,6 +2,17 @@ const express    = require('express');
 const User       = require('../../../models/User');
 const usersRoutes = express.Router();
 
+usersRoutes.get('/test', (req, res, next) => {
+  User.testing();
+  res.json('done');
+});
+
+usersRoutes.get('/:id', (req, res, next) => {
+  User.findOne({"facebookID":req.params.id}, (err, user) => {
+    res.send(user);
+  });
+});
+
 usersRoutes.post('/:id/location', (req, res, next) => {
   let location = {
     type: 'Point',
@@ -50,9 +61,6 @@ usersRoutes.post('/:id/keeper', (req, res, next) => {
       }
     );
   });
-
-
-
 
 });
 
