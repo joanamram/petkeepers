@@ -7,25 +7,25 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/api/users/index');
-var api = require('./routes/api/auth/index');
+var api = require('./routes/api/index');
 var app = express();
 var  authRoutes = require('./routes/api/auth/index');
 const session    = require('express-session');
 const passport   = require('passport');
-const cors = require('cors');
-
-var whitelist = [
-    'http://localhost:4200',
-    'http://localhost:3000',
-];
-var corsOptions = {
-    origin: function(origin, callback){
-        var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
-        callback(null, originIsWhitelisted);
-    },
-    credentials: true
-};
-app.use(cors(corsOptions));
+// const cors = require('cors');
+//
+// var whitelist = [
+//     'http://localhost:4200',
+//     'http://localhost:3000',
+// ];
+// var corsOptions = {
+//     origin: function(origin, callback){
+//         var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
+//         callback(null, originIsWhitelisted);
+//     },
+//     credentials: true
+// };
+// app.use(cors(corsOptions));
 require('dotenv').config();
 
 const mongoose = require('mongoose');
@@ -67,13 +67,15 @@ app.use(function(req, res, next) {
 });
 
 
+
 app.get('/', (req, res, next) => {
-  console.log(req.user);
+  console.log('test');
   res.render('./public/index.html');
 });
 
-app.use('/users', users);
 app.use('/api', api);
+app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
