@@ -6,25 +6,37 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
-var api = require('./routes/api/index');
+var users = require('./routes/api/users/index');
+var api = require('./routes/api/auth/index');
 var app = express();
 var  authRoutes = require('./routes/api/auth/index');
 const session    = require('express-session');
 const passport   = require('passport');
+const cors = require('cors');
 
+var whitelist = [
+    'http://localhost:4200',
+    'http://localhost:3000',
+];
+var corsOptions = {
+    origin: function(origin, callback){
+        var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
+        callback(null, originIsWhitelisted);
+    },
+    credentials: true
+};
+app.use(cors(corsOptions));
 require('dotenv').config();
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/petkeepers');
 
-const passportSetup = require('./config/passport');
-passportSetup(passport);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(cookieParser());
 app.use(session({
   secret: 'angular auth passport secret shh',
   resave: true,
@@ -40,10 +52,23 @@ app.use(passport.session());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
+const passportSetup = require('./config/passport');
+passportSetup(passport);
+
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Credentials', true);
+  res.header('Access-Control-Allow-Origin', req.headers.origin);
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
+  next();
+});
+
+
 app.get('/', (req, res, next) => {
+  console.log(req.user);
   res.render('./public/index.html');
 });
 

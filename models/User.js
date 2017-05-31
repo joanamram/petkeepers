@@ -21,10 +21,7 @@ const userSchema = new Schema({
   friends: Array,
   location: {
     type: {
-      type: String,
-      required: true,
-      enum: ['Point', 'LineString', 'Polygon'],
-      default: 'Point'
+      type: 'String',
     },
     coordinates: [Number]
   },
@@ -60,17 +57,17 @@ userSchema.index({location:'2dsphere'});
 //
 // });
 
-userSchema.virtual('fullname').get(function() {
-    return this.name + ' big poppa ';
-});
-
-userSchema.statics.testing = (cb) => {
-  var point = { type : "Point", coordinates : [40.419847,-3.705836] };
-  User.geoNear(point, { maxDistance : 6000, spherical : true }, function(err, results, stats) {
-     console.log(results);
-  });
-  console.log('hey');
-};
+// userSchema.virtual('fullname').get(function() {
+//     return this.name + ' big poppa ';
+// });
+//
+// userSchema.statics.testing = (cb) => {
+//   var point = { type : "Point", coordinates : [40.419847,-3.705836] };
+//   User.geoNear(point, { maxDistance : 6000, spherical : true }, function(err, results, stats) {
+//      console.log(results);
+//   });
+//   console.log('hey');
+// };
 
 const User = mongoose.model('User', userSchema);
 
