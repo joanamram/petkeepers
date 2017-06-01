@@ -1,0 +1,408 @@
+{
+    "_id" : ObjectId("592e1a70296d6b4873842873"), 
+    "updated_at" : ISODate("2017-05-31T14:20:00.637+0000"),
+    "created_at" : ISODate("2017-05-31T01:20:48.287+0000"),
+    "email" : "a.bernarsilos@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/13906627_1054107048040195_149341570348289327_n.jpg?oh=1e29e194e549dcdae19418ae52025b82&oe=59B1FF02",
+    "facebookID" : "1344704128980484",
+    "name" : "Alvaro Bernar Silos",
+    "keeper" : false,
+    "friends" : [
+        "10211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb4d93bb649b2dd5a55"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.008+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.008+0000"),
+    "facebookID" : "10211878185902164",
+    "name" : "Joana Sequerra Amram",
+    "email" : "joanamram@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : true,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "1344704128980484",
+        "10211878185902163",
+        "10211878185902144",
+        "10211878185902134",
+        "10211878185902114",
+        "10211878185902104",
+        "10211878185902064",
+        "10211878185901164",
+        "10211878185900164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb4d93bb649b2dd5a57"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.012+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.012+0000"),
+    "facebookID" : "10211878185902162",
+    "name" : "Marc Pomar",
+    "email" : "marc@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902163"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb4d93bb649b2dd5a56"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.011+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.011+0000"),
+    "facebookID" : "10211878185902163",
+    "name" : "Raul González",
+    "email" : "raul@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902164",
+        "10211878185902162",
+        "10211878185902161",
+        "10211878185902160",
+        "10211878185902154",
+        "10211878184902164",
+        "10211877185902164",
+        "10210878185902164",
+        "12211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb4d93bb649b2dd5a58"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.012+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.012+0000"),
+    "facebookID" : "10211878185902161",
+    "name" : "Olivia Santos",
+    "email" : "olivia@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : true,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902163"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb4d93bb649b2dd5a5a"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.012+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.012+0000"),
+    "facebookID" : "10211878185902154",
+    "name" : "Rafael García",
+    "email" : "rafael@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : true,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902163"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb4d93bb649b2dd5a59"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.012+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.012+0000"),
+    "facebookID" : "10211878185902160",
+    "name" : "Papu",
+    "email" : "papu@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : true,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902163"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb4d93bb649b2dd5a5b"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "facebookID" : "10211878185902144",
+    "name" : "Andreas Dartnuzer",
+    "email" : "andrei@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : true,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb4d93bb649b2dd5a5c"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "facebookID" : "10211878185902134",
+    "name" : "Francisco Marol",
+    "email" : "fran@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : true,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb4d93bb649b2dd5a5d"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "facebookID" : "10211878185902124",
+    "name" : "Lucía Santos",
+    "email" : "eri@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb5d93bb649b2dd5a5e"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "facebookID" : "10211878185902114",
+    "name" : "Pablo Rodriguez Camacho",
+    "email" : "pablo@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb5d93bb649b2dd5a61"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.014+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.014+0000"),
+    "facebookID" : "10211878185901164",
+    "name" : "Gonzalo Blanco",
+    "email" : "gonzalo@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : true,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb5d93bb649b2dd5a60"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.014+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.014+0000"),
+    "facebookID" : "10211878185902064",
+    "name" : "Claudia Mayor",
+    "email" : "claudia@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : true,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb5d93bb649b2dd5a5f"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.013+0000"),
+    "facebookID" : "10211878185902104",
+    "name" : "Alvaro Domicci",
+    "email" : "alvaro@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb5d93bb649b2dd5a62"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.014+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.014+0000"),
+    "facebookID" : "10211878185900164",
+    "name" : "Fernando Solis",
+    "email" : "fernando@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : true,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902164"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb5d93bb649b2dd5a64"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.016+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.016+0000"),
+    "facebookID" : "10211877185902164",
+    "name" : "Mauro",
+    "email" : "mauro@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902163"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb5d93bb649b2dd5a65"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.016+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.016+0000"),
+    "facebookID" : "10210878185902164",
+    "name" : "Josh",
+    "email" : "josh@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902163"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb5d93bb649b2dd5a66"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.016+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.016+0000"),
+    "facebookID" : "12211878185902164",
+    "name" : "Luis Barim",
+    "email" : "luis@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902163"
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e1fb5d93bb649b2dd5a63"),
+    "updated_at" : ISODate("2017-05-31T01:43:17.015+0000"),
+    "created_at" : ISODate("2017-05-31T01:43:17.015+0000"),
+    "facebookID" : "10211878184902164",
+    "name" : "Carlos Molero",
+    "email" : "carlos@gmail.com",
+    "picture" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/15326323_10210278184863138_3197406559207135164_n.jpg?oh=43c521e6307b991d5c46de680acee020&oe=59B567E4",
+    "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
+    "friends" : [
+        "10211878185902163"
+    ],
+    "__v" : NumberInt(0)
+}

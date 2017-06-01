@@ -1,0 +1,120 @@
+{
+    "_id" : ObjectId("592f7dc2fe7d26027b1cc14c"),
+    "updated_at" : ISODate("2017-06-01T03:35:28.222+0000"),
+    "created_at" : ISODate("2017-06-01T03:35:28.222+0000"),
+    "messages" : [
+        {
+            "content" : "Hola, he visto que eres keeper! Necesito que alguien me cuide el sábado a mi tortuga... ¿Podrías hacerte cargo?",
+            "authorId" : "592e1fb4d93bb649b2dd5a59",
+            "read" : false,
+            "createdAt" : ISODate("2017-06-01T03:35:28.222+0000")
+        }
+    ],
+    "members" : [
+        ObjectId("592e1fb4d93bb649b2dd5a59"),
+        ObjectId("592e1a70296d6b4873842873")
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("592e29d62fb3db4bae789c1f"),
+    "updated_at" : ISODate("2017-05-31T02:35:28.222+0000"),
+    "created_at" : ISODate("2017-05-30T02:26:30.961+0000"),
+    "messages" : [
+        {
+            "content" : "Buenos días",
+            "authorId" : "592e1a70296d6b4873842873",
+            "_id" : ObjectId("592e2bc8f4e4ee4bf2fffc7b"),
+            "read" : false,
+            "createdAt" : ISODate("2017-05-30T14:34:30.975+0000")
+        },
+        {
+            "content" : "Busco un keeper para este fin de semana cerca de la zona de matadero de Madrid.",
+            "authorId" : "592e1a70296d6b4873842873",
+            "_id" : ObjectId("592e2bf05fcb3a4bfced3e8e"),
+            "read" : false,
+            "createdAt" : ISODate("2017-05-30T14:34:12.520+0000")
+        },
+        {
+            "content" : "Hola!! Este finde estoy libre, así que no hay problema. :) ",
+            "authorId" : "592e1fb4d93bb649b2dd5a55",
+            "read" : false,
+            "createdAt" : ISODate("2017-05-30T16:12:12.520+0000")
+        },
+        {
+            "content" : "¿Qué días tienes pensado? ¿Sábado y domingo?",
+            "authorId" : "592e1fb4d93bb649b2dd5a55",
+            "read" : false,
+            "createdAt" : ISODate("2017-05-30T16:12:12.520+0000")
+        },
+        {
+            "content" : "¿Podría dejártelo el sábado al medio día y recogerlo el domingo por la noche?",
+            "authorId" : "592e1a70296d6b4873842873",
+            "read" : false,
+            "createdAt" : ISODate("2017-05-30T16:48:12.520+0000")
+        },
+        {
+            "content" : "Claro que si! Envíame una petición de keeping por favor",
+            "authorId" : "592e1fb4d93bb649b2dd5a55",
+            "read" : false,
+            "createdAt" : ISODate("2017-05-30T17:06:12.520+0000")
+        },
+        {
+            "content" : "Hola de nuevo, cambio de planes: necesito dejártelo el sábado a primera hora... salimos de viaje a las 10!",
+            "authorId" : "592e1a70296d6b4873842873",
+            "read" : false,
+            "createdAt" : ISODate("2017-05-31T19:21:12.520+0000")
+        },
+        {
+            "content" : "¿Puedo pasarme por ahí sobre las 8 - 8:15?",
+            "authorId" : "592e1a70296d6b4873842873",
+            "read" : false,
+            "createdAt" : ISODate("2017-05-31T19:22:12.520+0000")
+        },
+        {
+            "content" : "Sin problema! No olvides mandarme la petición, nos vemos el sábado por la mañana",
+            "authorId" : "592e1fb4d93bb649b2dd5a55",
+            "read" : false,
+            "createdAt" : ISODate("2017-05-31T19:22:12.520+0000")
+        }
+    ],
+    "members" : [
+        ObjectId("592e1fb4d93bb649b2dd5a55"),
+        ObjectId("592e1a70296d6b4873842873")
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "updated_at" : ISODate("2017-05-18T03:35:28.222+0000"),
+    "created_at" : ISODate("2017-05-18T03:35:28.222+0000"),
+    "messages" : [
+        {
+            "content" : "Muchas gracias por ser mi Alumno!",
+            "authorId" : "592e1fb4d93bb649b2dd5a57",
+            "read" : true,
+            "createdAt" : ISODate("2017-05-18T03:35:28.222+0000")
+        }
+    ],
+    "members" : [
+        ObjectId("592e1fb4d93bb649b2dd5a57"),
+        ObjectId("592e1a70296d6b4873842873")
+    ],
+    "__v" : NumberInt(0)
+}
+{
+    "updated_at" : ISODate("2017-05-27T03:35:28.222+0000"),
+    "created_at" : ISODate("2017-05-27T03:35:28.222+0000"),
+    "messages" : [
+        {
+            "content" : "Que pena! Otro día será. Espero que tengas suerte con tu búsqueda",
+            "authorId" : "592e1a70296d6b4873842873",
+            "read" : true,
+            "createdAt" : ISODate("2017-05-27T03:35:28.222+0000")
+        }
+    ],
+    "members" : [
+        ObjectId("592e1fb5d93bb649b2dd5a66"),
+        ObjectId("592e1a70296d6b4873842873")
+    ],
+    "__v" : NumberInt(0)
+}

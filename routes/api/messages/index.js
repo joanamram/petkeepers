@@ -6,13 +6,14 @@ const Message       = require('../../../models/Messages');
 const messagesRoutes = express.Router();
 
 messagesRoutes.get('/', (req, res, next) => {
-    Message.find({ "members": {$in: ["592567f4b137cf46a4aa56d5"]}})
+    Message.find({ "members": {$in: ["592e1a70296d6b4873842873"]}})
       .sort({updated_at: -1})
       .select({
         "updated_at": 1,
         "messages.content": 1,
         "messages.read": 1,
         "messages.authorId": 1,
+        "messages.createdAt": 1,
          "messages": {
            $slice: -1,
          },
@@ -20,8 +21,8 @@ messagesRoutes.get('/', (req, res, next) => {
        })
       .populate({
         path: 'members',
-        match: { _id: { $ne: "592567f4b137cf46a4aa56d5" }},
-        select: {_id: 0, "name":1, "picture": 1 },
+        match: { _id: { $ne: "592e1a70296d6b4873842873" }},
+        select: {_id: 1, "name":1, "picture": 1 },
       })
       .exec()
       .then((message) => res.send(message))
@@ -32,7 +33,7 @@ messagesRoutes.post('/getId', (req, res, next) => {
   if (!req.body.recipient) {
     return next(res.status(500).send({error:'Recipient not provided'}));
   }
-  Message.find({ "members": {$all: ["592567f4b137cf46a4aa56d5", req.body.recipient]}})
+  Message.find({ "members": {$all: ["592e1a70296d6b4873842873", req.body.recipient]}})
     .select({"_id": 1})
     .exec()
     .then((message) => res.send(message[0]._id))
@@ -47,7 +48,7 @@ messagesRoutes.post('/new', (req, res, next) => {
   const newMessage = new Message({
     members: [
       req.body.recipient,
-      "592567f4b137cf46a4aa56d5"
+      "592e1a70296d6b4873842873"
     ]
   });
   newMessage.save()
@@ -56,6 +57,7 @@ messagesRoutes.post('/new', (req, res, next) => {
 });
 
 messagesRoutes.get('/:id/', (req, res, next) => {
+
   Message.findById(req.params.id)
   .select({
     "messages.content": 1,
@@ -65,10 +67,23 @@ messagesRoutes.get('/:id/', (req, res, next) => {
    })
   .populate({
     path: 'members',
-    match: { _id: { $ne: "592567f4b137cf46a4aa56d5" }},
+    match: { _id: { $ne: "592e1a70296d6b4873842873" }},
     select: {_id: 1, "name":1, "picture": 1, "keeper": 1 },
   })
-  .exec((err, message) => res.send(message));
+  .exec((err, message) => {
+    res.send(message);
+    console.log(message.messages[message.messages.length - 1].content);
+    if (message.messages[message.messages.length - 1].authorId !== "592e1a70296d6b4873842873") {
+      var c = message.messages[message.messages.length - 1].content;
+      console.log('borrar');
+      Message.update({"_id": req.params.id, "messages.content": c},
+          { $set: { "messages.$.read": true } })
+          .exec()
+          .then((message) => console.log(message))
+          .catch((err) => console.log(err));
+    }
+
+  });
 });
 
 messagesRoutes.post('/:id/add', (req, res, next) => {
@@ -76,12 +91,12 @@ messagesRoutes.post('/:id/add', (req, res, next) => {
     return next(res.status(500).send({error:'Message is empty'}));
   }
   const addMessage = {
-    authorId: "592567f4b137cf46a4aa56d5",
+    authorId: "592e1a70296d6b4873842873",
     content: req.body.content,
   };
   Message.findOneAndUpdate(
       {"_id": req.params.id},
-      { $push: { messages: addMessage } },
+      { $set: { messages: addMessage } },
       { new: true})
       .select({
         "messages.content": 1,
@@ -94,7 +109,6 @@ messagesRoutes.post('/:id/add', (req, res, next) => {
       .then((message) => res.send(message.messages[0]))
       .catch((err) => res.send(false));
 });
-
 
 
 module.exports = messagesRoutes;
