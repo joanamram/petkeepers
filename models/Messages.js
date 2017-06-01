@@ -16,9 +16,9 @@ const messageSchema = new Schema({
   messages: [
     {
       authorId: String,
-      created_at: {
+      createdAt: {
         type: Date,
-        default: new Date()
+        default: Date.now
       },
       content: String,
       read: {

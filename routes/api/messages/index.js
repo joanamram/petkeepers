@@ -63,6 +63,7 @@ messagesRoutes.get('/:id/', (req, res, next) => {
     "messages.content": 1,
     "messages.authorId": 1,
     "messages.createdAt": 1,
+    "messages.read": 1,
      "members": 1
    })
   .populate({
@@ -72,12 +73,12 @@ messagesRoutes.get('/:id/', (req, res, next) => {
   })
   .exec((err, message) => {
     res.send(message);
-    console.log(message.messages[message.messages.length - 1].content);
-    if (message.messages[message.messages.length - 1].authorId !== "592e1a70296d6b4873842873") {
+    if (!(message.messages[message.messages.length - 1].read) && (message.messages[message.messages.length - 1].authorId !== "592e1a70296d6b4873842873")) {
       var c = message.messages[message.messages.length - 1].content;
-      console.log('borrar');
+      console.log('leer');
       Message.update({"_id": req.params.id, "messages.content": c},
-          { $set: { "messages.$.read": true } })
+          { $set: { "messages.$.read": true } },
+          { new: true})
           .exec()
           .then((message) => console.log(message))
           .catch((err) => console.log(err));
@@ -96,11 +97,12 @@ messagesRoutes.post('/:id/add', (req, res, next) => {
   };
   Message.findOneAndUpdate(
       {"_id": req.params.id},
-      { $set: { messages: addMessage } },
+      { $push: { messages: addMessage } },
       { new: true})
       .select({
         "messages.content": 1,
         "messages.authorId": 1,
+        "messages.createdAt": 1,
         "messages": {
           $slice: -1,
         },
