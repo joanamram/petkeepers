@@ -1,9 +1,10 @@
 const mongoose     = require('mongoose');
 const User    = require('../models/User');
+const Messages    = require('../models/Messages');
 
 mongoose.connect('mongodb://localhost/petkeepers');
 
-const entries = [
+const users = [
   {
     facebookID: "10211878185902164",
     name: "Joana Sequerra Amram",
@@ -169,7 +170,8 @@ const entries = [
 
 ];
 
-User.create(entries, (err, docs) => {
+
+User.create(users, (err, docs) => {
   if (err) {
     throw err;
   }

@@ -60,6 +60,7 @@ messagesRoutes.get('/:id/', (req, res, next) => {
   .select({
     "messages.content": 1,
     "messages.authorId": 1,
+    "messages.createdAt": 1,
      "members": 1
    })
   .populate({
