@@ -12,6 +12,19 @@ var app = express();
 var  authRoutes = require('./routes/api/auth/index');
 const session    = require('express-session');
 const passport   = require('passport');
+
+function isAuthenticated(req, res, next) {
+
+    // do any checks you want to in here
+
+    // CHECK THE USER STORED IN SESSION FOR A CUSTOM VARIABLE
+    // you can do this however you want with whatever variables you set up
+    if (req.user)
+        return next();
+
+    // IF A USER ISN'T LOGGED IN, THEN REDIRECT THEM SOMEWHERE
+    res.redirect('/login');
+}
 // const cors = require('cors');
 //
 // var whitelist = [
@@ -66,15 +79,20 @@ app.use(function(req, res, next) {
   next();
 });
 
-
-
-app.get('/', (req, res, next) => {
-  console.log('test');
-  res.render('./public/index.html');
+app.get('/login', (req, res, next) => {
+  console.log('login');
+  res.sendFile(path.join(__dirname + '/public/login.html'));
 });
 
-app.use('/api', api);
-app.use('/users', users);
+app.use('/api/auth', authRoutes);
+
+app.get('/', isAuthenticated, (req, res, next) => {
+  console.log(req.user);
+  res.sendFile(path.join(__dirname +'/public/app.html'));
+});
+
+app.use('/api', isAuthenticated, api);
+app.use('/users',isAuthenticated, users);
 
 
 // catch 404 and forward to error handler

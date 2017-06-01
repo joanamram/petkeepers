@@ -104,8 +104,8 @@ authRoutes.get('/private', (req, res, next) => {
 authRoutes.get("/facebook", passport.authenticate("facebook", { scope: ['user_friends', 'email'] }));
 
 authRoutes.get("/facebook/callback", passport.authenticate("facebook", {
-  successRedirect: "/private-page",
-  failureRedirect: "/"
+  successRedirect: "/",
+  failureRedirect: "/login"
 }));
 
 module.exports = authRoutes;
