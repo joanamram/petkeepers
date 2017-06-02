@@ -42,7 +42,7 @@ function isAuthenticated(req, res, next) {
 require('dotenv').config();
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/petkeepers');
+mongoose.connect(process.env.DB_URI);
 
 
 

@@ -4,7 +4,7 @@ const Match       = require('../../../models/Match');
 const matchRoutes = express.Router();
 
 matchRoutes.get('/all', (req, res, next) => {
-    Match.find({ "keeper": "592e1a70296d6b4873842873"})
+    Match.find({ "keeper": req.user.id})
       .sort({updated_at: -1})
       .select({
         "petOwner": 1,

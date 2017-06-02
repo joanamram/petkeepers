@@ -6,7 +6,7 @@ const Message       = require('../../../models/Messages');
 const messagesRoutes = express.Router();
 
 messagesRoutes.get('/', (req, res, next) => {
-    Message.find({ "members": {$in: ["592e1a70296d6b4873842873"]}})
+    Message.find({ "members": {$in: [req.user.id]}})
       .sort({updated_at: -1})
       .select({
         "updated_at": 1,
@@ -21,7 +21,7 @@ messagesRoutes.get('/', (req, res, next) => {
        })
       .populate({
         path: 'members',
-        match: { _id: { $ne: "592e1a70296d6b4873842873" }},
+        match: { _id: { $ne: req.user.id }},
         select: {_id: 1, "name":1, "picture": 1 },
       })
       .exec()
@@ -33,7 +33,7 @@ messagesRoutes.post('/getId', (req, res, next) => {
   if (!req.body.recipient) {
     return next(res.status(500).send({error:'Recipient not provided'}));
   }
-  Message.find({ "members": {$all: ["592e1a70296d6b4873842873", req.body.recipient]}})
+  Message.find({ "members": {$all: [req.user.id, req.body.recipient]}})
     .select({"_id": 1})
     .exec()
     .then((message) => res.send(message[0]._id))
@@ -48,7 +48,7 @@ messagesRoutes.post('/new', (req, res, next) => {
   const newMessage = new Message({
     members: [
       req.body.recipient,
-      "592e1a70296d6b4873842873"
+      req.user.id
     ]
   });
   newMessage.save()
@@ -68,12 +68,12 @@ messagesRoutes.get('/:id/', (req, res, next) => {
    })
   .populate({
     path: 'members',
-    match: { _id: { $ne: "592e1a70296d6b4873842873" }},
+    match: { _id: { $ne: req.user.id }},
     select: {_id: 1, "name":1, "picture": 1, "keeper": 1 },
   })
   .exec((err, message) => {
     res.send(message);
-    if (!(message.messages[message.messages.length - 1].read) && (message.messages[message.messages.length - 1].authorId !== "592e1a70296d6b4873842873")) {
+    if (!(message.messages[message.messages.length - 1].read) && (message.messages[message.messages.length - 1].authorId !== req.user.id)) {
       var c = message.messages[message.messages.length - 1].content;
       console.log('leer');
       Message.update({"_id": req.params.id, "messages.content": c},
@@ -92,7 +92,7 @@ messagesRoutes.post('/:id/add', (req, res, next) => {
     return next(res.status(500).send({error:'Message is empty'}));
   }
   const addMessage = {
-    authorId: "592e1a70296d6b4873842873",
+    authorId: req.user.id,
     content: req.body.content,
   };
   Message.findOneAndUpdate(

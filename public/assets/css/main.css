@@ -68,3 +68,25 @@
    content: "\2605";
    position: absolute;
 }
+
+.new_rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+   color: $color-base;
+   position: absolute;
+   right: 16px;
+   bottom: 8px;
+   display: block;
+   height: 1rem;
+}
+.new_rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+
+.new_rating > span:hover:before,
+.new_rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
