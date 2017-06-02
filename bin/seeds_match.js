@@ -21,7 +21,7 @@ const matches = [
     petOwner: "592e1fb4d93bb649b2dd5a5b",
     comment: "Tuvieron que amputar a mi perro porque Álvaro lo dejo suelto en un parque...",
     rate: 1
-  },    
+  },
 ];
 
 
