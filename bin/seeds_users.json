@@ -1,5 +1,5 @@
 {
-    "_id" : ObjectId("592e1a70296d6b4873842873"), 
+    "_id" : ObjectId("592e1a70296d6b4873842873"),
     "updated_at" : ISODate("2017-05-31T14:20:00.637+0000"),
     "created_at" : ISODate("2017-05-31T01:20:48.287+0000"),
     "email" : "a.bernarsilos@gmail.com",
@@ -7,6 +7,13 @@
     "facebookID" : "1344704128980484",
     "name" : "Alvaro Bernar Silos",
     "keeper" : false,
+    "location" : {
+        "type" : "Point",
+        "coordinates" : [
+            40.416775,
+            -3.70379
+        ]
+    },
     "friends" : [
         "10211878185902164"
     ],

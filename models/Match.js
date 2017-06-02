@@ -3,8 +3,6 @@ const Schema   = mongoose.Schema;
 
 
 const matchSchema = new Schema({
-  fromDate: Date,
-  toDate: Date,
   keeper: {
     ref: 'User',
     type: Schema.Types.ObjectId,
@@ -17,8 +15,7 @@ const matchSchema = new Schema({
   },
   comment: String,
   rate: Number
-  },
-
+},
 {
   timestamps: {
     createdAt: 'created_at',

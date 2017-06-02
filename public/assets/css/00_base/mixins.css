@@ -1,0 +1,61 @@
+
+@define-mixin ListItem{
+  padding: 16px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 1px solid $grey-lighten-3;
+
+  &:first-child {
+    margin-top: 8px;
+  }
+
+  @descendent title {
+    font-size: 16px;
+    position: relative;
+  }
+
+  @descendent text {
+    font-size: 14px;
+    color: $grey-darken-1;
+    height: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+@define-mixin ListItem-WithAvatar{
+	padding-left: 72px;
+
+  @descendent avatar {
+    height: 40px;
+    width: 40px;
+    left: 0px;
+    background: grey;
+    border-style: none;
+    border-radius: 50%;
+    margin-left: 16px;
+    position: absolute;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+}
+
+@define-mixin ListItem-WithIcon{
+	padding-right: 54px;
+
+  @descendent icon {
+    background: grey;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}

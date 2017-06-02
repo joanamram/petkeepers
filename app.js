@@ -87,11 +87,15 @@ app.get('/login', (req, res, next) => {
 app.use('/api/auth', authRoutes);
 
 app.get('/', isAuthenticated, (req, res, next) => {
+  res.redirect('/profile');
+});
+
+app.get('/profile', isAuthenticated, (req, res, next) => {
   console.log(req.user);
   res.sendFile(path.join(__dirname +'/public/app.html'));
 });
 
-app.use('/api', isAuthenticated, api);
+app.use('/api', api);
 app.use('/users',isAuthenticated, users);
 
 

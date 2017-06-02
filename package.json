@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "seeds": "node ./bin/seeds",
-    "test": "node ./bin/test"
+    "test": "node ./bin/test",
+    "match": "node ./bin/seeds_match"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
