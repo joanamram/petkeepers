@@ -122,7 +122,7 @@ h2, p {
     width: 56px;*/
 	height: 40px;
 	width: 40px;
-	background: #03a9f4;
+	background: #0097a7;
 	border-radius: 50%;
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .3);
 	/*padding: 16px;*/
@@ -141,7 +141,7 @@ h2, p {
 	border-radius: 2px;
 	line-height: 48px;
 	text-transform: uppercase;
-	color: #03a9f4;
+	color: #0097a7;
 }
 
 .o-Header .a-FlatButton{
@@ -311,7 +311,7 @@ main {
 	direction: ltr;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	color: #9dc180;
+	color: #56c8d8;
 	font-size: 16px;
 	top: 0px;
 	left: 0px;
@@ -351,7 +351,7 @@ main {
 }
 
 .m-Message-new{
-	color: #03a9f4;
+	color: #0097a7;
 	font-size: 10px;
 	position: absolute;
 	text-transform: uppercase;
@@ -452,7 +452,7 @@ main {
 	margin: 16px;
 	margin-top:8px;
 	margin-bottom:8px;
-	background: #dcf8c6;
+	background: #56c8d8;
 	margin-left: 64px;
 	border-radius: 2px;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
@@ -472,7 +472,7 @@ main {
 
 .m-Conversation--mine:after {
 	border-right: 10px solid transparent;
-	border-bottom: 10px solid #dcf8c6;
+	border-bottom: 10px solid #56c8d8;
 	border-left: 0px;
 	right: -10px;
 	left: auto;
@@ -558,7 +558,7 @@ main {
 }
 
 .o-Navbar-item.is-active{
-	color: #03a9f4;
+	color: #0097a7;
 	font-size: 14px;
 	padding-top: 6px;
 }
@@ -600,7 +600,7 @@ main {
 	width: 200px;
 	position: absolute;
 	left: 72px;
-	color: #03a9f4;
+	color: #0097a7;
 	padding-bottom: 20px;
 	font-size: 24px;
 	vertical-align: bottom;
@@ -659,7 +659,7 @@ main {
 .o-ProfileCard-bg{
 	height: calc(66.66666666666667vw - 56px);
 	max-height: 35vh;
-	background: #03a9f4 url(http://www.smartcc365.com/data/out/10/788690.jpg);
+	background: #0097a7 url(http://www.smartcc365.com/data/out/10/788690.jpg);
 	background-size: 100% auto;
 	background-position: 50%;
 	width: 100%;
@@ -729,7 +729,7 @@ main {
 	position: absolute;
 	top: -20px;
 	right: -20px;
-	color: #03a9f4;
+	color: #0097a7;
 }
 
 .o-ProfileCard-buttons{
@@ -758,6 +758,73 @@ main {
 	bottom: 0px;
 	width: 100%;
 	box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .3);
+}
+
+.loader {
+    position: absolute;
+    z-index: 999;
+    top: calc(50% - 34px);
+    left: calc(50% - 34px);
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #0097a7;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+   color: #0097a7;
+   display: inline;
+}
+
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+
+.rating.rating5 > span:nth-child(1):before,
+.rating.rating5 > span:nth-child(1) ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.rating.rating4 > span:nth-child(2):before,
+.rating.rating4 > span:nth-child(2) ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.rating.rating3 > span:nth-child(3):before,
+.rating.rating3 > span:nth-child(3) ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.rating.rating2 > span:nth-child(4):before,
+.rating.rating2 > span:nth-child(4) ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.rating.rating1 > span:nth-child(5):before,
+.rating.rating1 > span:nth-child(5) ~ span:before {
+   content: "\2605";
+   position: absolute;
 }
 
 @media (min-width: 768px){}

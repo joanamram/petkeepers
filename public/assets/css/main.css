@@ -7,3 +7,64 @@
 @import "02_molecules/molecules.css";
 @import "03_organisms/organisms.css";
 @import "utilities.css";
+
+.loader {
+    position: absolute;
+    z-index: 999;
+    top: calc(50% - 34px);
+    left: calc(50% - 34px);
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid $color-base;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+   color: $color-base;
+   display: inline;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+
+.rating.rating5 > span:nth-child(1):before,
+.rating.rating5 > span:nth-child(1) ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.rating.rating4 > span:nth-child(2):before,
+.rating.rating4 > span:nth-child(2) ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.rating.rating3 > span:nth-child(3):before,
+.rating.rating3 > span:nth-child(3) ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.rating.rating2 > span:nth-child(4):before,
+.rating.rating2 > span:nth-child(4) ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.rating.rating1 > span:nth-child(5):before,
+.rating.rating1 > span:nth-child(5) ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
